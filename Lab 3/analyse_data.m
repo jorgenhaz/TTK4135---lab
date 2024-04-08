@@ -3,7 +3,7 @@ close all
 clc
 
 %% Plotting
-load LAB2\Measure\LAB2_test.mat
+load LAB3\Measure\LAB3_test.mat
 
 t_measurement = T_Tr_p_pr_e_er_LAB2u(1,:);
 Travel = T_Tr_p_pr_e_er_LAB2u(2,:);

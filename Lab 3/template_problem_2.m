@@ -122,6 +122,6 @@ plot(t,x3,'m',t,x3,'mo'),grid
 ylabel('p')
 subplot(515)
 plot(t,x4,'m',t,x4','mo'),grid
-xlabel('tid (s)'),ylabel('pdot')
+xlabel('tid (s) $\dot{x}$', "Interpreter","latex"),ylabel('pdot')
 
 %saveas(fig2,"LAB2_simulation.png")

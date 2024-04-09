@@ -22,11 +22,11 @@ values = ["t","$$\lambda$$","r","p","$$\dot{p}$$", "e", "$$\dot{e}$$",...
 
 %% Plotting
 
-max_samples = 15000; % 30 sec
+max_samples = 17000;
 t = test1.LAB3(1,1:max_samples);
 
 fig1 = figure(1);
-set(fig1, "Position", [100,-250,1500,1500]); % Adjust the position and size of figure. [x,y,sizex,sizey]
+set(fig1, "Position", [200,-300,1100,1400]); % Adjust the position and size of figure. [x,y,sizex,sizey]
 
 %Travel
 subplot(3,2,1)
@@ -35,7 +35,7 @@ for i = 1:length(test_cells)
 plot(t,deg2rad(test_cells{i}.LAB3(2,1:max_samples)))
 end
 ylabel(values(2), "Interpreter", "latex")
-xlabel(values(1), "Interpreter", "latex")
+xlabel(values(1))
 grid on;
 legend(ledgend_list)
 hold off
@@ -100,8 +100,8 @@ grid on;
 legend(ledgend_list)
 hold off
 
-saveas(fig1, "LAB3_plots.png");
-saveas(fig1, "LAB3_plots.svg");
+%saveas(fig1, "LAB3_plots.png");
+
 
 
 

@@ -26,7 +26,7 @@ max_samples = 15000; % 30 sec
 t = test1.LAB3(1,1:max_samples);
 
 fig1 = figure(1);
-set(fig1, "Position", [100,-250,1500,1500]); % Adjust the position and size of figure. [x,y,sizex,sizey]
+set(fig1, "Position", [50,-250,1500,1500]); % Adjust the position and size of figure. [x,y,sizex,sizey]
 
 %Travel
 subplot(3,2,1)
@@ -34,8 +34,8 @@ hold on
 for i = 1:length(test_cells)
 plot(t,deg2rad(test_cells{i}.LAB3(2,1:max_samples)))
 end
-ylabel(values(2), "Interpreter", "latex")
-xlabel(values(1), "Interpreter", "latex")
+ylabel(values(2) + "[rad]", "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
@@ -46,8 +46,8 @@ hold on
 for i = 1:length(test_cells)
 plot(t,(test_cells{i}.LAB3(8,1:max_samples)))
 end
-xlabel(values(1), "Interpreter", "latex")
-ylabel(values(8), "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
+ylabel(values(8) + "[rad]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
@@ -58,8 +58,8 @@ hold on
 for i = 1:length(test_cells)
 plot(t,deg2rad(test_cells{i}.LAB3(4,1:max_samples)))
 end
-xlabel(values(1), "Interpreter", "latex")
-ylabel(values(4), "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
+ylabel(values(4) + "[rad]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
@@ -70,8 +70,8 @@ hold on
 for i = 1:length(test_cells)
 plot(t,(test_cells{i}.LAB3(10,1:max_samples)))
 end
-xlabel(values(1), "Interpreter", "latex")
-ylabel(values(10), "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
+ylabel(values(10) + "[rad]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
@@ -82,8 +82,8 @@ hold on
 for i = 1:length(test_cells)
 plot(t,(test_cells{i}.LAB3(13,1:max_samples)))
 end
-xlabel(values(1), "Interpreter", "latex")
-ylabel(values(13), "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
+ylabel(values(13) + "[rad]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
@@ -94,14 +94,14 @@ hold on
 for i = 1:length(test_cells)
 plot(t,(test_cells{i}.LAB3(12,1:max_samples)))
 end
-xlabel(values(1), "Interpreter", "latex")
-ylabel(values(12), "Interpreter", "latex")
+xlabel(values(1) + "[s]", "Interpreter", "latex")
+ylabel(values(12) + "[rad]", "Interpreter", "latex")
 grid on;
 legend(ledgend_list)
 hold off
 
 saveas(fig1, "LAB3_plots.png");
-saveas(fig1, "LAB3_plots.svg");
+
 
 
 

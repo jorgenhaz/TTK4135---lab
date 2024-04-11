@@ -67,14 +67,24 @@ beq = [A_d*x0;zeros((N-1)*mx,1)];        % Generate b
 %% Tuning 
 % LQR
 
-Q_lqr = diag([1 1 1 1 1 1]);
-R_lqr = diag([0.1 0.1]);
+
+Q_lqr = diag([6 1 10 1 30 1]);  % nice tuning travel tuned1 = 5 tuned2 = 10 tuned 3 = 7.5 tuned4 = 6
+% %Q_lqr = diag([4 1 3.6 1 16 1]); % bryson ish / ikke så nais
+% %R_lqr = diag([0.4 1]);          % bryson ish / ikke så nais
+R_lqr = diag([2 0.1]);          % nice tuning
+
+
+
 
 K_lqr = dlqr(A_d,B_d,Q_lqr,R_lqr);
 
 %Creating function (see preparation for explanation)
-q_1 = 8;
-q_2 = 8;
+
+%good tuned small q
+q_1 = 5.7;
+q_2 = 10.9;
+
+
 
 R = [q_1 0;
     0 q_2];
@@ -153,6 +163,6 @@ ylabel('e')
 subplot(428)
 plot(t,x6,'m',t,x6','mo'),grid
 xlabel('tid (s)'),ylabel('edot')
-saveas(fig2,plot_file_name)
+%saveas(fig2,plot_file_name)
 
 

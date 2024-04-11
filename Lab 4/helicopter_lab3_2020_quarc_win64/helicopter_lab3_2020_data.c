@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter_lab3_2020".
  *
- * Model version              : 11.7
+ * Model version              : 11.10
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Apr  4 16:14:30 2024
+ * C source code generated on : Thu Apr 11 12:31:44 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -41,10 +41,10 @@ P_helicopter_lab3_2020_T helicopter_lab3_2020_P = {
   /* Variable: K_lqr
    * Referenced by: '<Root>/Gain1'
    */
-  { -0.89971740380182608, -6.2149971938788653E-15, -3.2006777478111652,
-    -2.0428726892041886E-14, 1.7410327191946662, 7.0294435621321856E-15,
-    0.67322401738649851, 1.1981812025173982E-15, 8.5071406129824923E-16,
-    2.0230090787863841, 4.0530544617961931E-16, 2.5786929371779572 },
+  { -1.1232525263041251, 6.8180098182912174E-15, -3.7428279218980252,
+    2.0411717990348885E-14, 2.211460573543671, -5.9837228385114672E-15,
+    0.64679847342007657, -9.8312634337365234E-16, 5.6107253473197258E-16,
+    11.97709764447729, 8.4284093472086052E-16, 8.3905799755374417 },
 
   /* Variable: K_pd
    * Referenced by: '<S6>/K_pd'
@@ -166,6 +166,11 @@ P_helicopter_lab3_2020_T helicopter_lab3_2020_P = {
    */
   0.0,
 
+  /* Expression: 180
+   * Referenced by: '<Root>/Travel Offset [deg]'
+   */
+  180.0,
+
   /* Expression: 2*pi/8192
    * Referenced by: '<S5>/Travel: Count to rad'
    */
@@ -175,6 +180,31 @@ P_helicopter_lab3_2020_T helicopter_lab3_2020_P = {
    * Referenced by: '<S13>/Gain'
    */
   57.295779513082323,
+
+  /* Expression: 2*pi /4096
+   * Referenced by: '<S5>/Pitch: Count to rad'
+   */
+  0.0015339807878856412,
+
+  /* Expression: 180/pi
+   * Referenced by: '<S10>/Gain'
+   */
+  57.295779513082323,
+
+  /* Expression: -2 * pi /4096
+   * Referenced by: '<S5>/Elevation: Count to rad'
+   */
+  -0.0015339807878856412,
+
+  /* Expression: 180/pi
+   * Referenced by: '<S8>/Gain'
+   */
+  57.295779513082323,
+
+  /* Expression: -30
+   * Referenced by: '<Root>/elavation_offset [deg]'
+   */
+  -30.0,
 
   /* Computed Parameter: TravelTransferFcn_A
    * Referenced by: '<S5>/Travel: Transfer Fcn'
@@ -193,16 +223,6 @@ P_helicopter_lab3_2020_T helicopter_lab3_2020_P = {
 
   /* Expression: 180/pi
    * Referenced by: '<S14>/Gain'
-   */
-  57.295779513082323,
-
-  /* Expression: 2*pi /4096
-   * Referenced by: '<S5>/Pitch: Count to rad'
-   */
-  0.0015339807878856412,
-
-  /* Expression: 180/pi
-   * Referenced by: '<S10>/Gain'
    */
   57.295779513082323,
 
@@ -225,21 +245,6 @@ P_helicopter_lab3_2020_T helicopter_lab3_2020_P = {
    * Referenced by: '<S11>/Gain'
    */
   57.295779513082323,
-
-  /* Expression: -2 * pi /4096
-   * Referenced by: '<S5>/Elevation: Count to rad'
-   */
-  -0.0015339807878856412,
-
-  /* Expression: 180/pi
-   * Referenced by: '<S8>/Gain'
-   */
-  57.295779513082323,
-
-  /* Expression: -30
-   * Referenced by: '<Root>/elavation_offset [deg]'
-   */
-  -30.0,
 
   /* Computed Parameter: ElevationTransferFcn_A
    * Referenced by: '<S5>/Elevation: Transfer Fcn'

@@ -107,7 +107,7 @@ grid on;
 legend(ledgend_list)
 hold off
 
-saveas(fig1, "LAB3_plots.png");
+saveas(fig1, "LAB4_plots.png");
 
 
 

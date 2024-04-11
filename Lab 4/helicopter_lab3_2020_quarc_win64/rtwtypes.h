@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter_lab3_2020".
  *
- * Model version              : 11.7
+ * Model version              : 11.10
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Apr  4 16:14:30 2024
+ * C source code generated on : Thu Apr 11 12:31:44 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping

@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter_lab3_2020".
  *
- * Model version              : 11.7
+ * Model version              : 11.10
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Apr  4 16:14:30 2024
+ * C source code generated on : Thu Apr 11 12:31:44 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -62,7 +62,7 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&helicopter_lab3_2020_B.TravelCounttorad), 0, 0, 24 }
+  { (char_T *)(&helicopter_lab3_2020_B.TravelCounttorad), 0, 0, 25 }
   ,
 
   { (char_T *)(&helicopter_lab3_2020_DW.HILInitialize_AIMinimums[0]), 0, 0, 70 },
@@ -71,8 +71,7 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&helicopter_lab3_2020_DW.HILReadEncoderTimebase_Task), 15, 0, 1 },
 
-  { (char_T *)(&helicopter_lab3_2020_DW.FromWorkspace2_PWORK.TimePtr), 11, 0, 13
-  },
+  { (char_T *)(&helicopter_lab3_2020_DW.Scope_PWORK.LoggedData[0]), 11, 0, 16 },
 
   { (char_T *)(&helicopter_lab3_2020_DW.HILInitialize_ClockModes[0]), 6, 0, 46 },
 
@@ -97,7 +96,7 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&helicopter_lab3_2020_P.HILWriteAnalog_channels[0]), 7, 0, 2 },
 
-  { (char_T *)(&helicopter_lab3_2020_P.HILInitialize_OOTerminate), 0, 0, 48 },
+  { (char_T *)(&helicopter_lab3_2020_P.HILInitialize_OOTerminate), 0, 0, 49 },
 
   { (char_T *)(&helicopter_lab3_2020_P.HILInitialize_CKChannels[0]), 6, 0, 10 },
 

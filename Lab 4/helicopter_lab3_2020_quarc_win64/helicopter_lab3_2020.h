@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter_lab3_2020".
  *
- * Model version              : 11.7
+ * Model version              : 11.10
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Apr  4 16:14:30 2024
+ * C source code generated on : Thu Apr 11 12:31:44 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -868,13 +868,14 @@
 typedef struct {
   real_T TravelCounttorad;             /* '<S5>/Travel: Count to rad' */
   real_T Gain;                         /* '<S13>/Gain' */
-  real_T Gain_d;                       /* '<S14>/Gain' */
+  real_T Sum7;                         /* '<Root>/Sum7' */
   real_T PitchCounttorad;              /* '<S5>/Pitch: Count to rad' */
   real_T Gain_i;                       /* '<S10>/Gain' */
-  real_T Gain_b;                       /* '<S11>/Gain' */
   real_T ElevationCounttorad;          /* '<S5>/Elevation: Count to rad' */
   real_T Gain_e;                       /* '<S8>/Gain' */
   real_T Sum;                          /* '<Root>/Sum' */
+  real_T Gain_d;                       /* '<S14>/Gain' */
+  real_T Gain_b;                       /* '<S11>/Gain' */
   real_T Gain_dg;                      /* '<S9>/Gain' */
   real_T FromWorkspace2[6];            /* '<Root>/From Workspace2' */
   real_T FromWorkspace[2];             /* '<Root>/From Workspace' */
@@ -902,6 +903,10 @@ typedef struct {
   real_T HILWriteAnalog_Buffer[2];     /* '<S5>/HIL Write Analog' */
   t_card HILInitialize_Card;           /* '<Root>/HIL Initialize' */
   t_task HILReadEncoderTimebase_Task;  /* '<S5>/HIL Read Encoder Timebase' */
+  struct {
+    void *LoggedData[3];
+  } Scope_PWORK;                       /* '<Root>/Scope' */
+
   struct {
     void *TimePtr;
     void *DataPtr;
@@ -1114,11 +1119,29 @@ struct P_helicopter_lab3_2020_T_ {
   real_T HILInitialize_POWatchdog;     /* Expression: watchdog_pwm_outputs
                                         * Referenced by: '<Root>/HIL Initialize'
                                         */
+  real_T TravelOffsetdeg_Value;        /* Expression: 180
+                                        * Referenced by: '<Root>/Travel Offset [deg]'
+                                        */
   real_T TravelCounttorad_Gain;        /* Expression: 2*pi/8192
                                         * Referenced by: '<S5>/Travel: Count to rad'
                                         */
   real_T Gain_Gain;                    /* Expression: 180/pi
                                         * Referenced by: '<S13>/Gain'
+                                        */
+  real_T PitchCounttorad_Gain;         /* Expression: 2*pi /4096
+                                        * Referenced by: '<S5>/Pitch: Count to rad'
+                                        */
+  real_T Gain_Gain_a;                  /* Expression: 180/pi
+                                        * Referenced by: '<S10>/Gain'
+                                        */
+  real_T ElevationCounttorad_Gain;     /* Expression: -2 * pi /4096
+                                        * Referenced by: '<S5>/Elevation: Count to rad'
+                                        */
+  real_T Gain_Gain_l;                  /* Expression: 180/pi
+                                        * Referenced by: '<S8>/Gain'
+                                        */
+  real_T elavation_offsetdeg_Value;    /* Expression: -30
+                                        * Referenced by: '<Root>/elavation_offset [deg]'
                                         */
   real_T TravelTransferFcn_A;         /* Computed Parameter: TravelTransferFcn_A
                                        * Referenced by: '<S5>/Travel: Transfer Fcn'
@@ -1129,14 +1152,8 @@ struct P_helicopter_lab3_2020_T_ {
   real_T TravelTransferFcn_D;         /* Computed Parameter: TravelTransferFcn_D
                                        * Referenced by: '<S5>/Travel: Transfer Fcn'
                                        */
-  real_T Gain_Gain_l;                  /* Expression: 180/pi
+  real_T Gain_Gain_lu;                 /* Expression: 180/pi
                                         * Referenced by: '<S14>/Gain'
-                                        */
-  real_T PitchCounttorad_Gain;         /* Expression: 2*pi /4096
-                                        * Referenced by: '<S5>/Pitch: Count to rad'
-                                        */
-  real_T Gain_Gain_a;                  /* Expression: 180/pi
-                                        * Referenced by: '<S10>/Gain'
                                         */
   real_T PitchTransferFcn_A;           /* Computed Parameter: PitchTransferFcn_A
                                         * Referenced by: '<S5>/Pitch: Transfer Fcn'
@@ -1149,15 +1166,6 @@ struct P_helicopter_lab3_2020_T_ {
                                         */
   real_T Gain_Gain_ae;                 /* Expression: 180/pi
                                         * Referenced by: '<S11>/Gain'
-                                        */
-  real_T ElevationCounttorad_Gain;     /* Expression: -2 * pi /4096
-                                        * Referenced by: '<S5>/Elevation: Count to rad'
-                                        */
-  real_T Gain_Gain_lv;                 /* Expression: 180/pi
-                                        * Referenced by: '<S8>/Gain'
-                                        */
-  real_T elavation_offsetdeg_Value;    /* Expression: -30
-                                        * Referenced by: '<Root>/elavation_offset [deg]'
                                         */
   real_T ElevationTransferFcn_A;   /* Computed Parameter: ElevationTransferFcn_A
                                     * Referenced by: '<S5>/Elevation: Transfer Fcn'

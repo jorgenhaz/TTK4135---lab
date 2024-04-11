@@ -4,8 +4,8 @@
  * This file was generated automatically by QUARC. It serves as the main
  * entry point for the real-time code.
  *
- * Date:           Thu Apr  4 16:14:29 2024
- * Model version:  11.7
+ * Date:           Thu Apr 11 12:31:44 2024
+ * Model version:  11.10
  * Matlab version: 9.4 (R2020b) 29-Jul-2020
  ****************************************************************************/
 
@@ -393,7 +393,7 @@ int
   if (final_time >= 0.0 || final_time == RUN_FOREVER) {
     rtmSetTFinal(S,final_time);
   } else {
-    rtmSetTFinal(S,rtInf);
+    rtmSetTFinal(S,35.0);
   }
 
   action.sa_handler = control_c_handler;

@@ -16,8 +16,8 @@ test8 = load ("Measure\LAB4_Q_R_tuned2.mat");
 test9 = load ("Measure\LAB4_Q_R_tuned3.mat");
 test10 = load ("Measure\LAB4_Q_R_tuned4.mat");
 
-%test_cells = {test1, test2, test3, test4, test5, test6, test7, test8, test9, test10};
-test_cells = {test7,test8,test9,test10};
+test_cells = {test1, test2, test3, test4, test5, test6, test7, test8, test9, test10};
+%test_cells = {test7,test8,test9,test10};
 %% Value strings for plotting
 ledgend_list = ["Q=eye(6),R=eye(2)","Q=eye(6),R=10*eye(2)",...
     "Q=eye(6),R=0.1*eye(2)","Q=10*eye(6),R=eye(2)","Q=50T50E,R=1","Q=25T25E,R=1",...

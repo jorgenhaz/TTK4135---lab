@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.22
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Feb 22 14:40:26 2024
+ * C source code generated on : Thu Apr 11 10:15:46 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -868,15 +868,16 @@
 typedef struct {
   real_T TravelCounttorad;             /* '<S4>/Travel: Count to rad' */
   real_T Gain;                         /* '<S12>/Gain' */
-  real_T Gain_d;                       /* '<S13>/Gain' */
+  real_T Sum3;                         /* '<Root>/Sum3' */
   real_T PitchCounttorad;              /* '<S4>/Pitch: Count to rad' */
   real_T Gain_i;                       /* '<S9>/Gain' */
+  real_T FromWorkspace;                /* '<Root>/From Workspace' */
+  real_T Gain_d;                       /* '<S13>/Gain' */
   real_T Gain_b;                       /* '<S10>/Gain' */
   real_T ElevationCounttorad;          /* '<S4>/Elevation: Count to rad' */
   real_T Gain_e;                       /* '<S7>/Gain' */
   real_T Sum;                          /* '<Root>/Sum' */
   real_T Gain_dg;                      /* '<S8>/Gain' */
-  real_T FromWorkspace;                /* '<Root>/From Workspace' */
   real_T Gain_l;                       /* '<S11>/Gain' */
   real_T BackmotorSaturation;          /* '<S4>/Back motor: Saturation' */
   real_T FrontmotorSaturation;         /* '<S4>/Front motor: Saturation' */
@@ -905,6 +906,10 @@ typedef struct {
     void *DataPtr;
     void *RSimInfoPtr;
   } FromWorkspace_PWORK;               /* '<Root>/From Workspace' */
+
+  struct {
+    void *LoggedData[3];
+  } Scope_PWORK;                       /* '<Root>/Scope' */
 
   struct {
     void *FilePtr;
@@ -1099,11 +1104,20 @@ struct P_helicopter_T_ {
   real_T HILInitialize_POWatchdog;     /* Expression: watchdog_pwm_outputs
                                         * Referenced by: '<Root>/HIL Initialize'
                                         */
+  real_T Constant1_Value;              /* Expression: 180
+                                        * Referenced by: '<Root>/Constant1'
+                                        */
   real_T TravelCounttorad_Gain;        /* Expression: 2*pi/8192
                                         * Referenced by: '<S4>/Travel: Count to rad'
                                         */
   real_T Gain_Gain;                    /* Expression: 180/pi
                                         * Referenced by: '<S12>/Gain'
+                                        */
+  real_T PitchCounttorad_Gain;         /* Expression: 2*pi /4096
+                                        * Referenced by: '<S4>/Pitch: Count to rad'
+                                        */
+  real_T Gain_Gain_a;                  /* Expression: 180/pi
+                                        * Referenced by: '<S9>/Gain'
                                         */
   real_T TravelTransferFcn_A;         /* Computed Parameter: TravelTransferFcn_A
                                        * Referenced by: '<S4>/Travel: Transfer Fcn'
@@ -1116,12 +1130,6 @@ struct P_helicopter_T_ {
                                        */
   real_T Gain_Gain_l;                  /* Expression: 180/pi
                                         * Referenced by: '<S13>/Gain'
-                                        */
-  real_T PitchCounttorad_Gain;         /* Expression: 2*pi /4096
-                                        * Referenced by: '<S4>/Pitch: Count to rad'
-                                        */
-  real_T Gain_Gain_a;                  /* Expression: 180/pi
-                                        * Referenced by: '<S9>/Gain'
                                         */
   real_T PitchTransferFcn_A;           /* Computed Parameter: PitchTransferFcn_A
                                         * Referenced by: '<S4>/Pitch: Transfer Fcn'

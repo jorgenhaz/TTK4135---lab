@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.22
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Feb 22 14:40:26 2024
+ * C source code generated on : Thu Apr 11 10:15:46 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -158,6 +158,11 @@ P_helicopter_T helicopter_P = {
    */
   0.0,
 
+  /* Expression: 180
+   * Referenced by: '<Root>/Constant1'
+   */
+  180.0,
+
   /* Expression: 2*pi/8192
    * Referenced by: '<S4>/Travel: Count to rad'
    */
@@ -165,6 +170,16 @@ P_helicopter_T helicopter_P = {
 
   /* Expression: 180/pi
    * Referenced by: '<S12>/Gain'
+   */
+  57.295779513082323,
+
+  /* Expression: 2*pi /4096
+   * Referenced by: '<S4>/Pitch: Count to rad'
+   */
+  0.0015339807878856412,
+
+  /* Expression: 180/pi
+   * Referenced by: '<S9>/Gain'
    */
   57.295779513082323,
 
@@ -185,16 +200,6 @@ P_helicopter_T helicopter_P = {
 
   /* Expression: 180/pi
    * Referenced by: '<S13>/Gain'
-   */
-  57.295779513082323,
-
-  /* Expression: 2*pi /4096
-   * Referenced by: '<S4>/Pitch: Count to rad'
-   */
-  0.0015339807878856412,
-
-  /* Expression: 180/pi
-   * Referenced by: '<S9>/Gain'
    */
   57.295779513082323,
 

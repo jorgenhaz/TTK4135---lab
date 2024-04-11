@@ -7,9 +7,9 @@
  *
  * Code generation for model "helicopter".
  *
- * Model version              : 11.13
+ * Model version              : 11.22
  * Simulink Coder version : 9.4 (R2020b) 29-Jul-2020
- * C source code generated on : Thu Feb 22 14:40:26 2024
+ * C source code generated on : Thu Apr 11 10:15:46 2024
  *
  * Target selection: quarc_win64.tlc
  * Note: GRT includes extra infrastructure and instrumentation for prototyping
@@ -62,7 +62,7 @@ static const char_T * rtDataTypeNames[] = {
 
 /* data type transitions for block I/O structure */
 static DataTypeTransition rtBTransitions[] = {
-  { (char_T *)(&helicopter_B.TravelCounttorad), 0, 0, 15 }
+  { (char_T *)(&helicopter_B.TravelCounttorad), 0, 0, 16 }
   ,
 
   { (char_T *)(&helicopter_DW.HILInitialize_AIMinimums[0]), 0, 0, 70 },
@@ -71,7 +71,7 @@ static DataTypeTransition rtBTransitions[] = {
 
   { (char_T *)(&helicopter_DW.HILReadEncoderTimebase_Task), 15, 0, 1 },
 
-  { (char_T *)(&helicopter_DW.FromWorkspace_PWORK.TimePtr), 11, 0, 12 },
+  { (char_T *)(&helicopter_DW.FromWorkspace_PWORK.TimePtr), 11, 0, 15 },
 
   { (char_T *)(&helicopter_DW.HILInitialize_ClockModes[0]), 6, 0, 46 },
 
@@ -94,7 +94,7 @@ static DataTypeTransition rtPTransitions[] = {
 
   { (char_T *)(&helicopter_P.HILWriteAnalog_channels[0]), 7, 0, 2 },
 
-  { (char_T *)(&helicopter_P.HILInitialize_OOTerminate), 0, 0, 48 },
+  { (char_T *)(&helicopter_P.HILInitialize_OOTerminate), 0, 0, 49 },
 
   { (char_T *)(&helicopter_P.HILInitialize_CKChannels[0]), 6, 0, 10 },
 

@@ -36,8 +36,8 @@ z0 = z;                                 % Initial value for optimization
 
 % Bounds
 p_bound = 60*pi/360;
-ul 	    = -p_bound * ones(mu,1);        % Lower bound on control
-uu 	    = p_bound * ones(mu,1);         % Upper bound on control
+ul 	    = -Inf * ones(mu,1);        % Lower bound on control
+uu 	    = Inf * ones(mu,1);         % Upper bound on control
 
 xl      = -Inf*ones(mx,1);              % Lower bound on states (no bound)
 xu      = Inf*ones(mx,1);               % Upper bound on states (no bound)
@@ -55,7 +55,7 @@ Q1(1,1) = 1;                            % Weight on state x1
 Q1(2,2) = 0;                            % Weight on state x2
 Q1(3,3) = 0;                            % Weight on state x3
 Q1(4,4) = 0;                            % Weight on state x4
-q = 0.01;                                  % Weight on input (tests:0.12,1.2,12)
+q = 12;                                  % Weight on input (tests:0.12,1.2,12)
 Q = gen_q(Q1,q,N,M);                    % Generate Q, hint: gen_q
 c = [];                                 % Generate c, this is the linear constant term in the QP
 
@@ -116,5 +116,5 @@ ylabel('p')
 subplot(515)
 plot(t,x4,'m',t,x4','mo'),grid
 xlabel('tid (s)'),ylabel('pdot')
-
+sgtitle('q=0.12  ||  no constraints on p_{c}  ||  all values are radians')
 %saveas(fig2,"LAB2_simulation.png")
